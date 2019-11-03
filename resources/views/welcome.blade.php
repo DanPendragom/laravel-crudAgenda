@@ -21,7 +21,7 @@
     </style>
 </head>
 <body>
-    <form method="POST" autocomplete="off" action="cadastrar">
+    <form method="POST" autocomplete="off" action="contacts">
         
         <label for="nome">Digite seu nome:</label>
         <input type="text" name="nome"/>
@@ -33,7 +33,7 @@
         <input type="text" name="email"/>
         
         <label for="social">Circulo Social:</label>
-        <select name="social" id="">
+        <select name="social">
             <option value="null">Indefinido</option>
             <option value="profissional">Profissional</option>
             <option value="academico">Acadêmico</option>

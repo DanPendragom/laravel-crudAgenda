@@ -15,4 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/register','Controller@register');
+Route::resource('contacts', 'Contacts')->middleware('auth');
