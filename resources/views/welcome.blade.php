@@ -13,9 +13,34 @@
             padding:0;
             box-sizing: border-box;
         }
+        form{
+            margin:100px 500px;
+            display: flex;
+            flex-direction: column;
+        }
     </style>
 </head>
 <body>
-    <h1>Hello World</h1>
+    <form method="POST" autocomplete="off" action="cadastrar">
+        
+        <label for="nome">Digite seu nome:</label>
+        <input type="text" name="nome"/>
+        
+        <label for="telefone">Telefone:</label>
+        <input type="text" name="telefone"/>
+        
+        <label for="email">Email:</label>
+        <input type="text" name="email"/>
+        
+        <label for="social">Circulo Social:</label>
+        <select name="social" id="">
+            <option value="null">Indefinido</option>
+            <option value="profissional">Profissional</option>
+            <option value="academico">Acadêmico</option>
+            <option value="pessoal">Pessoal</option>
+        </select>
+        
+        <input type="submit" value="Submit"/>
+    </form>
 </body>
 </html>
