@@ -16,7 +16,7 @@ class Contacts extends Controller
 
     public function create()
     {
-        return view('contact');
+        return view('contatos.create');
     }
 
     public function store(Request $request)
@@ -32,9 +32,9 @@ class Contacts extends Controller
     }
 
 
-    public function show(User $user)
+    public function show($id)
     {
-        
+        return view('contatos.show');
     }
 
     public function edit(User $user)
