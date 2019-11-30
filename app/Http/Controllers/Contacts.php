@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+// importando model 
 use App\User;
 use Illuminate\Http\Request;
 
@@ -10,7 +10,8 @@ class Contacts extends Controller
 
     public function index()
     {
-        return view('contacts');
+        $contacts = User::all();
+        return view('contatos.index')->with(['contacts' => $contacts]);
     }
 
     public function create()
@@ -20,15 +21,14 @@ class Contacts extends Controller
 
     public function store(Request $request)
     {
-        $contact = new Contact;
-        
-        $contact->name        = $request->name;
+        $contact = new User;
+        $contact->name        = $request->nome;
+        $contact->tell        = $request->telefone;
         $contact->email       = $request->email;
-        $contact->tell        = $request->tell;
         $contact->social      = $request->social;
         $contact->save();
-
-        return redirect()->route('contacts.index')->with('message', 'O contao foi criado com sucesso!');
+        
+        return redirect()->route('contacts.index');
     }
 
 

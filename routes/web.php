@@ -15,4 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('contacts', 'Contacts')->middleware('auth');
+Route::resource('/contacts','Contacts');
+
+// Route::resource('contacts', 'Contacts')->middleware('auth');
