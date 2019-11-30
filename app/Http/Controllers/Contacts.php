@@ -34,7 +34,8 @@ class Contacts extends Controller
 
     public function show($id)
     {
-        return view('contatos.show');
+        $contact = User::find($id);
+        return view('contatos.show')->with(['contact'=> $contact]);
     }
 
     public function edit(User $user)

@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Agenda</title>
     <style>
         .container {
             margin-top: 25px;
@@ -35,8 +35,7 @@
                     <th scope="col">ID</th>
                     <th scope="col">NOME</th>
                     <th scope="col">TELEFONE</th>
-                    <th scope="col">E-MAIL</th>
-                    <th scope="col">CíRCULO SOCIAL</th>
+                    <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
@@ -45,8 +44,7 @@
                     <th scope="row">{{$contact->id}}</th>
                     <td>{{$contact->name}}</td>
                     <td>{{$contact->tell}}</td>
-                    <td>{{$contact->email}}</td>
-                    <td>{{$contact->social}}</td>
+                    <td><a href="{{route('contacts.show', ['contact'=>$contact->id])}}">Ver mais</a></td>
                 </tr>
                 @endforeach
             </tbody>
