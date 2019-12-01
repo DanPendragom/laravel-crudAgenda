@@ -20,8 +20,8 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav mr-auto">
-                    <a class="nav-item nav-link" href="{{route('contacts.create')}}">Adicionar <span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link active" href="{{route('contacts.index')}}">Exibir</a>
+                    <a class="nav-item nav-link" href="{{route('contacts.create')}}">Adicionar</a>
+                    <a class="nav-item nav-link" href="{{route('contacts.index')}}">Exibir</a>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">

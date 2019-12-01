@@ -12,9 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('contatos.create');
 });
 
-Route::resource('/contacts','Contacts');
+Route::resource('/contacts','Contacts', ['except' => ['destroy']]);    
+
+Route::get('/contacts/{contact}/delete', 'Contacts@destroy')->name('contacts.destroy');
 
 // Route::resource('contacts', 'Contacts')->middleware('auth');

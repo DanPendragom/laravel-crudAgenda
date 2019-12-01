@@ -19,7 +19,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav mr-auto">
-                    <a class="nav-item nav-link active" href="{{route('contacts.create')}}">Adicionar <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="{{route('contacts.create')}}">Adicionar</a>
                     <a class="nav-item nav-link" href="{{route('contacts.index')}}">Exibir</a>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
@@ -46,7 +46,7 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="telefone">Telefone:</label>
-                        <input class="form-control" maxlength="11" type="text" name="telefone" value="{{ old('telefone', $contact->tell)}}" />
+                        <input class="form-control" maxlength="11" minlength="11" type="text" name="telefone" value="{{ old('telefone', $contact->tell)}}" />
                     </div>
                 </div>
             </div>

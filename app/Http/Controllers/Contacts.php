@@ -55,7 +55,11 @@ class Contacts extends Controller
         return redirect()->route('contacts.index');
     }
 
-    public function destroy(User $user)
+    public function destroy($id)
     {
+        $contact = User::find($id);
+        $contact->delete();
+
+        return redirect()->route('contacts.index');
     }
 }

@@ -36,6 +36,8 @@
                     <th scope="col">NOME</th>
                     <th scope="col">TELEFONE</th>
                     <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
