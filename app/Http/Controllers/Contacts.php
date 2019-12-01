@@ -38,14 +38,21 @@ class Contacts extends Controller
         return view('contatos.show')->with(['contact'=> $contact]);
     }
 
-    public function edit(User $user)
+    public function edit($id)
     {
-
+        $contact = User::find($id);
+        return view('contatos.edit')->with(['contact'=> $contact]);
     }
 
-    public function update(Request $request, User $user)
+    public function update(Request $request, $id)
     {
-      
+        $contact = User::find($id);
+        $contact->name        = $request->nome;
+        $contact->tell        = $request->telefone;
+        $contact->email       = $request->email;
+        $contact->social      = $request->social;
+        $contact->save();
+        return redirect()->route('contacts.index');
     }
 
     public function destroy(User $user)

@@ -30,13 +30,14 @@
     </header>
     <div class="container">
 
-        <form action="{{route('contacts.store')}}" method="POST">
+        <form action="{{route('contacts.update', ['contact'=>$contact->id])}}" method="POST">
             @csrf
+            @method('PUT')
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="nome">Nome:</label>
-                        <input class="form-control" placeholder="Ex: Paulo Montier" type="text" name="nome" required />
+                        <input class="form-control" placeholder="Ex: Paulo Montier" type="text" name="nome" value="{{ old('nome', $contact->name)}}" />
                     </div>
                 </div>
             </div>
@@ -45,7 +46,7 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="telefone">Telefone:</label>
-                        <input class="form-control" placeholder="Apenas números" maxlength="11" minlength="11" type="text" name="telefone" required />
+                        <input class="form-control" maxlength="11" type="text" name="telefone" value="{{ old('telefone', $contact->tell)}}" />
                     </div>
                 </div>
             </div>
@@ -54,7 +55,7 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="email">Email:</label>
-                        <input class="form-control" placeholder="paulomontier@email.com" type="email" name="email" required />
+                        <input class="form-control" placeholder="paulomontier@email.com" type="email" name="email" value="{{ old('email', $contact->email)}}" />
                     </div>
                 </div>
             </div>
@@ -75,7 +76,7 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <br>
-                        <button type="submit" value="" class="btn btn-dark ">CADASTRAR</button>
+                        <button type="submit" value="" class="btn btn-primary ">ATUALIZAR</button>
                     </div>
                 </div>
             </div>

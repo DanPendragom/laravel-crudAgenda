@@ -45,6 +45,8 @@
                     <td>{{$contact->name}}</td>
                     <td>{{$contact->tell}}</td>
                     <td><a href="{{route('contacts.show', ['contact'=>$contact->id])}}">Ver mais</a></td>
+                    <td><a href="{{route('contacts.edit', ['contact'=>$contact->id])}}">Editar</a></td>
+                    <td><a href="{{route('contacts.destroy', ['contact'=>$contact->id])}}">Apagar</a></td>
                 </tr>
                 @endforeach
             </tbody>
